@@ -1,0 +1,87 @@
+html,
+body {
+  height: 100%;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  display: block;
+  padding: 10px;
+  margin-left: 50px;
+  color: #0f0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #000;
+}
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Courier New", Courier, monospace;
+  margin: 0;
+}
+
+#terminal {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#terminal-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  overflow-y: scroll;
+}
+
+#terminal p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+#terminal span {
+  color: #0f0;
+}
+
+#terminal .prompt:before {
+  content: "$";
+  color: #0f0;
+  margin-right: 5px;
+}
+
+#terminal input {
+  border: none;
+  background-color: transparent;
+  color: #0f0;
+  width: 80%;
+  margin-bottom: 150px;
+  margin-top: 15px;
+  padding: 0;
+  outline: none;
+}
+
+#terminal input:focus {
+  outline: none;
+}
+
+#terminal a {
+  color: #00f;
+  text-decoration: none;
+}
+
+#terminal a:hover {
+  text-decoration: underline;
+}
