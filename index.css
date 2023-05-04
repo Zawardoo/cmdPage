@@ -37,7 +37,12 @@ body {
   flex-direction: column;
   align-items: stretch;
 }
-
+#WIP {
+  color: #0f0;
+}
+#asciiART {
+  color: rgb(190, 44, 44);
+}
 #terminal-content {
   flex-grow: 1;
   display: flex;
