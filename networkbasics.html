@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>What_am_I_learning</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">/Home</a></li>
+        <li><a href="experience.html">/My_experience</a></li>
+        <li><a href="learning.html">/What_am_I_learning</a></li>
+        <li><a href="withme.html">/Learn_With_Me</a></li>
+        <li><a href="contact.html">/Contact</a></li>
+      </ul>
+      </nav>
+      <div id="WIP"><p>WORK IN PROGRESS</p></div>
+      <div id="terminal"> 
+        <div id="terminal-content">
+        <div id="notescontent">
+            <pre>
+        A network can't exist unless each of the devices has the means of communicating with the another.
+
+        TYPES: PAN LAN MAN WAN
+
+
+            PAN: Persona Area Network
+                Mainly using Bluethoot and IEEE 802.15.
+
+            LAN: Local Area Network 
+                Single location network(home,office), usually with authentifiation
+
+            MAN: Metropolitian Area Network
+                Network between two different locations i.e ISP to my home Local area
+                            network
+
+            WAN: Wide Area Network
+                Like in my work, you connect via vpn to the "Headquaters"
+
+
+        TOPOLOGY: 
+            Topology describes the physical part of a network(router, server, pc)
+
+            TYPES: Bus, Ring, Mesh, Star
+
+                Bus: All devices connected to one cable(bus) i.e in my room.
+                Disadvatage is the small range and if there is a problem with the bus,whole network is down
+
+                Ring: Components are connected to each other(next to one and other, not randomly), Same disadvantage like bus
+
+                Mesh: Every device is connected to each device on the network. In modern days we use logic mesh mostly,and is primarily made possible through the use of network protocols.
+
+                Star: Most common and most scalable.
+                Every device is connected to single one, like in my room
+
+
+
+        ETHERNET:	
+
+
+            ETHERNET:
+
+                Synonimous with the wire based LAN (ethernet cable)
+                Defines a framework for data transmission, error handling.
+                Ethernet is used in OSI at data link and physical layers.
+                
+
+            Fast Ethernet:
+
+                    Reffered as 100BASE-TX, speeds up to 100Mbps.
+            
+
+            Gigabit Ethernet:IEEE 802.3ab
+
+                    Developed to support faster comunication services like media streaming and VoIP. 
+                    10X faster than 100-base-tx
+
+            10 Gigabit Ethernet: IEEE 802.3.ae
+
+                    Standart data transfer at nominal speed of 10Gbps
+                    Made possible with fiber.
+            
+
+            Terabit Ethernet: Never heard of it tbh
+
+                    Terabit Ethernet offers data transfer speeds of 200 Gbps and 400 Gbps. It's expected that Terabit Ethernet will offer speeds of 800 Gbps and 1.6 Tbps in the future.
+            
+        STANDARDS:
+            It would be impossible to build networks and connect network-enabled devices reliably without network standards.
+            
+            Protocols provide a unified method for comunication
+            Standards, on the other hand, provide hardware and software that use standardized protocols  
+            
+            Standards are the framework between devices 
+                
+            Official bodies that publish standards are - Telecommunication Union (ITU), the   American National Standards Institute (ANSI), and the Institute of Electrical and Electronics Engineers (IEEE)
+            
+                I.e 802 standard - covers wired and wireless connection
+
+
+        INFRASTRUCTURE:
+
+            There are several devices making the backbone of the network
+            These devices are: 
+            - Repeaters
+            - Hubs
+            - Bridges
+            - Switches
+            - Routers
+            almost all of the above are depending on MAC or an IP address to deliver data to thee network
+            
+            Media access control (MAC) address is a unique identifier of every network-enabled device right after manufacture. In CMD we can find it as physical address
+            Each mac address is composed of 6 hexadecimal numbers separated with colon or dash
+            i.e AA-6A-BA-2B-68-C1 - first three numbers are the manufacturer OID and the other are the device ID.
+                
+                Repeater
+                Two port device that repeats the network signals but does not amplify them. Used when devices are some distance away.
+            
+                Bridge
+                Divides a network into segments and can filter and forward packets to correct device by MAC address
+                
+                Hub
+                Are multiport repeaters connecting multiple devices to the network. Hubs do not filter traffic but sends it to all ports. Hub can operate on one speed,the speed of the slowest device connected to it.
+                Can be used as endpoint for star layout like in my room.
+                Types of hubs:
+                - Fast Ethernet: used for 100-Mbps networks. Can come in two types: class I and class II. The difference between them is the delay.Class I up to 140-bit times and Class II up to 96-bit times
+                - Dual speed: Solves the problem of the whole network having the speed of the slovest device by having the capability of operating at 2 speeds.
+                Hubs are mainly used at enterprise level.
+                
+                Switch
+                Basically a combination between a bridge and hub. So it can segment the network, and filter data while connecting multiple devices to the network.
+            
+                    Features: 
+                        1. Adjustable speed
+                        2. Many but no all switches support POE
+                        3. Other devices can be attached to the switch to enable: port mirroring, packet sniffers and intrusion-detection systems.
+                    Types: Unmanaged - designed for home and small office use, packet switching occurs automatically.
+                    
+                            Managed - can be configured to desired params via: cmd, ssh, remote console or web interface
+                            
+                            List of common configuration options that manufactures offer:Quality of Service, Virtual LANs, Spanning Tree Protocol (STP), Port mirroring,  Bandwidth rate-limiting, MAC address filtering, SNMP client
+                
+                Router: Links networks together, when configuring network usually configure them with a default gateway(router) IP address. So routers are also called gateway.
+                
+                    Interconnectivity: routers in interconnected network are the preferred route between each of the networks. Routers act as start of authority for all network devices on its network. Routers share information between each other via Border Gateway Protocol(BGP)
+                    
+
+
+        Network protocols
+
+
+            Network protocols are basically like language. We are using English to communicate between each other and devices use network protocols to communicate between each other trough the network
+            
+                Network address: 
+                    Its a unique identifier of a device. IP address.
+                Data packet: 
+                    Unit describing the messages sent between devices.
+                    Its comparable to sending a letter in mail but you can send only one packet in one envelope.
+                    
+                    The packet contains information such as: raw data, headers i.e:sender and receivers address and but not always trailer
+                    trailer handles errors
+                Datagram:
+                    Its the same as packet, but less reliable
+                Routing:
+                    Concept that makes sure that packets follow a certain path
+            Protocol categories:
+                Different tasks require different protocols
+                - Network communication protocols
+                - Network security protocols
+                - Network management protocols
+
+                Let's take a closer look at them
+                
+                Communication protocol: 3 foundational protocols of internet based communication are TCP, IP, UDP 
+                
+                    Transmission Control Protocol(TCP): Chunks up data to packets, and securely and quickly sends them while trying to minimize data loss.
+                    
+                    Internet protocol(IP): Is responsible for addressing the packets by adding a header witch contains sender and recipient IP addresses. Does not guarantee that packet will be delivered, only that the address header is there.
+                    
+                    User Datagram Protocol(UDP): Offers low latency but does not verify that the datagram was delivered (Not working with packet but datagrams)
+                
+                These bellow are not the foundation but are useful to know what do they mean
+                
+                    Hypertext Transfer Protocol(HTTP): Uses TCP/IP to deliver content from a server to browser, but its not encrypted, more modern equivalent is HTTPS - secured hyper text..
+                    
+                    File Transfer Protocol(FTP): Self explanatory, used for data transfer between computers. Web downloads are handled through HTTP. 
+                    
+                    Interactive Mail Access Protocol(IMAP): IMAP is the more powerful of the three email protocols. With IMAP and an email client, you can manage a single mailbox on an email server in your organization.
+                
+                Security protocols: Designed to maintain security across the network.
+                    
+                Different protocols are suited for different uses. Each protocol is working with different type of encryption and cryptographic principles
+                
+                    Secure Socket Layer(SSL): standard security protocol providing encryption between computer and server or device accessed over the internet 
+                    
+                    Transport Layer Security(TLS): Mores secure version of SSL, designed to stop message tampering and evesdroping
+                    
+                    Hypertext Transfer Protocol Secure (HTTPS): Secure version of HTTP, provides encrypted traffic between server and browser.
+                    
+                    Secure Shell(SSH): Designed to support command line execution including remote authentication.
+                    
+                    Kerberos: Is a validation protocol, authentication client-sever-based application with secret key. It assumes all endpoints are insecure(Like you ;))
+                    
+                Management protocols
+                    Simple Network Management Protocol(SNMP): allows collection of data from devices on your network and the management of those devices. 
+                    
+                    Internet Control Message Protocol(ICMP): This one is included within the internet protocol suite. It allows network connected devices to send warning and error messages.
+                    
+                Ports: If you remember, I compared protocols to languages, but unlike humans servers have different ears for each language. This means that each port is used for a different thing, different protocol.
+                
+                IPv4: Old af(1983) internet protocol used in all packet-switch-based networks.
+                    
+                    Structure: Four decimal numbers in range of 0 to 255 separated with a dot.
+                                i.e 192.182.0.1
+                
+                IPv6: Difference in the structure of the address, instead of decimal numbers, it uses 8 groups of hexadecimal numbers i.e 2001:0db8:0000:0000:0000:8a2e:0370:7334 
+                New standard allows the address to be shorten by these rules: 
+                    One or more leading zeros from any group can be removed, so 0042 becomes 42.
+                Consecutive sections of zeros are replaced with a double colon (::), which can be used only once in an address. i.e 2001:db8::8a2e:370:7334
+
+        Subnet 
+
+
+        Defines one or more logical networks within class A,B,C networks. If there were no subnets, we would have only one network in each class
+
+
+        DNS
+
+
+        Domain Name System - decentralizes lookup service that translates human readable domain name to an IP address of the server hosting the site. Also old af (1985)
+
+        It has two purposes act as a cache of last searched domains. Secondly to act as a start of authority for all domains under it. 
+    </pre>
+</div>
+          </p> 
+          <div id="asciiART">
+            <pre>
+              mm                  
+              mm@***@m@                          *@@@                  
+            m@@*     *@                            @@   mmm            
+            @@*       * *@@@m@@@  m@@**@@m    m@**@@@  *@@@    m@@*@@m 
+            @!            @@* ** @@*    *@@ m@@    @@    @@   @@*   *@@
+            @!m    *@@@@  @!     @@      !@ @!@    @!    @!   @@     @@
+            *!@m     @@   @!     @!      !@ *!@    @!    @!   @@     !@
+            !!!    *!@!!  !!     @!      !! !!!    !!    !!   !@     !!
+            *:!!     !!   !:     !!!    !!! *:!    !:    !:   !!!   !!!
+              ::: : ::  : :::     :!: : :!   : : : ! : : :::   : : : : 
+            </pre>
+      </div>
+        
+      
+            
+  </body>
+
+</html>
